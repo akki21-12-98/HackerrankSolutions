@@ -1,0 +1,9 @@
+n = int(input())
+l = list(map(int, input().split()))
+t = []
+for i in range(1, n+1):
+    z = l.index(i) + 1
+    y = l.index(z)
+    y += 1
+    t.append(y)
+print(*t, sep = '\n')   
