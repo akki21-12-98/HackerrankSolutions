@@ -1,0 +1,14 @@
+p = int(input())
+n = int(input())
+if n == 1 or n == p :
+    print(0)
+elif p%2 == 0:
+    if n == p-1:
+        print(1)
+    else :
+        print(min(n//2,(p-n)//2))
+else :
+    if n == p-1:
+        print(0)
+    else :
+        print(min(n//2,(p-n)//2))
