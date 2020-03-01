@@ -1,0 +1,20 @@
+n = int(input())
+s = 0
+l = []
+ans = []
+for i in range(n):
+    tem1 = input().upper()
+    l.append(tem1)
+l = sorted(l)
+q = int(input())
+for i in range(q):
+    s = 0
+    t = input()
+    c = l.index(t)
+    for j in l[c]:
+        t1 = j
+        temp = ord(t1)-64
+        s = s + temp
+    u = (c+1)*s
+    ans.append(u)
+print(*ans, sep ='\n')
