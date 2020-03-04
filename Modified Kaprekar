@@ -1,0 +1,31 @@
+p = int(input())
+q = int(input())
+lis = []
+for i in range(p,q+1):
+    a = i**2
+    s = str(a)
+    c = len(s)
+    d = len(str(i))
+    if len(str(a)) == 1:
+        if i == 1:
+            lis.append(i)
+    else:
+        if len(s)%2 :
+            r = s[c-d:]
+            l = s[0:d-1]
+            t1 = int(l)
+            t2 = int(r)
+            if t1 + t2 == i:
+                lis.append(i)
+        else :
+            r = s[c//2:]
+            l = s[0:c//2]
+            t1 = int(l)
+            t2 = int(r)
+            if t1 + t2 == i:
+                lis.append(i)                
+                
+if len(lis) != 0:             
+    print(*lis, sep = ' ')
+else :
+    print('INVALID RANGE')
