@@ -1,0 +1,17 @@
+t = int(input())
+while t != 0:
+    ss = input()
+    s = list(ss)
+    ts = set(s)
+    i = 0
+    c = 0
+    n = len(s)
+    m = len(ts)
+    if len(ts) == 1:
+        print(n-1)
+    else:
+        for i in range(0, len(s)-1):
+            if s[i] == s[i+1]:
+                c += 1
+        print(c)
+    t -= 1
