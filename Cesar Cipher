@@ -1,0 +1,25 @@
+n = int(input())
+s = input()
+k = int(input())
+l = []
+d = k % 26
+for item in s:
+    a = ord(item)
+    
+    if  (a >= 65 and a<= 90)  :
+        f = (a-64) + d
+        while f > 26:
+            f -= 26
+        f += 64
+        l.append(chr(f))
+    
+    elif (a >= 97 and a <= 122):
+        f = (a-96) + d
+        while f > 26:
+            f -= 26
+        f += 96
+        l.append(chr(f))
+    
+    else:
+        l.append(item)
+print(''.join(l))
