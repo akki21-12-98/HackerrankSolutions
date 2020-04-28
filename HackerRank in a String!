@@ -1,0 +1,14 @@
+for t in range(0, int(input())):
+    a = ['h', 'a', 'c', 'k', 'e', 'r', 'r', 'a', 'n', 'k']
+    s = list(map(str,input()))
+    l = []
+    for i in a:
+        for j in s:
+            s = s[s.index(j)+1:]
+            if i == j:
+                l.append(i)
+                break
+    if l == a:
+        print('YES')
+    else:
+        print('NO')
